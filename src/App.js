@@ -87,7 +87,7 @@ const [casesType,setCasesType] = useState("cases")
         </FormControl>
       </div>
       <div className="app_stats">
-        <Infobox isRed active={casesType==="cases"} onClick={e=>setCasesType("cases")} title="Corona Virus Cases" cases={prettyPrintStat(countryInfo.cases)} total={prettyPrintStat(countryInfo.cases) }/>
+        <Infobox isRed active={casesType==="cases"} onClick={e=>setCasesType("cases")} title="Covid Cases" cases={prettyPrintStat(countryInfo.cases)} total={prettyPrintStat(countryInfo.cases) }/>
         <Infobox active={casesType==="recovered"} onClick={e=>setCasesType("recovered")} title="Recovered" cases={prettyPrintStat(countryInfo.recovered)} total={prettyPrintStat(countryInfo.recovered)}/>
         <Infobox isRed active={casesType==="deaths"} onClick={e=>setCasesType("deaths")} title="Deaths" cases={prettyPrintStat(countryInfo.deaths)} total={prettyPrintStat(countryInfo.deaths)}/>
       </div>
