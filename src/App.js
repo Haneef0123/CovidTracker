@@ -104,7 +104,7 @@ const [casesType,setCasesType] = useState("cases")
             <CardContent>
               <LineGraph casesType={casesType}/>
               <h3>{countryInfo.country} new {casesType}</h3> 
-              <h1>Live Cases by country</h1>
+              <h2 style={{fontSize:"1.2rem"}} >Live cases by country</h2>
               <Table countries={tableData} />
             </CardContent>
         </Card>
