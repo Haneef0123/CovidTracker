@@ -102,8 +102,8 @@ const [casesType,setCasesType] = useState("cases")
       <div className="app_right" >
         <Card>
             <CardContent>
-              <LineGraph casesType={casesType}/>
-              <h3>{countryInfo.country} {casesType}</h3> 
+              <LineGraph casesType={casesType} country={country} />
+              <h3>{`${country==="worldwide"?"worldwide":countryInfo.country}`} {casesType}</h3> 
               <h2 style={{fontSize:"1.2rem"}} >Live cases by country</h2>
               <Table countries={tableData} />
             </CardContent>
