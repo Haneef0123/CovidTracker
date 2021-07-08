@@ -8,7 +8,7 @@ function Infobox({title,active,isRed,cases,total,...props}) {
         <Card className={`infoBox ${active && "infoBox--selected"} ${isRed && "infoBox--red"} ${props.darkTheme && "infoBox--darkTheme"}`} onClick={props.onClick}>
             
             <CardContent>
-                <Typography className={`${props.darkTheme?"infoBox_title--dark": "infoBox_title"}`} >{title}</Typography>
+                <Typography className={`${props.darkTheme?"infoBox_title--dark": ""}`} >{title}</Typography>
                 <h2 className={`infoBox_cases ${props.darkTheme && "infoBox--darkCases"}`} >{cases}</h2>
                 {/* <Typography className="infoBox_total" >{total} Total</Typography> */}
 

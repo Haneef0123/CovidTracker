@@ -32,6 +32,9 @@
 .infoBox_title--dark{
     color: grey;
 }
+.infoBox p,h2{
+overflow-wrap: break-word;
+}
 
 /* .infoBox_total{
     color: #6c757d;
