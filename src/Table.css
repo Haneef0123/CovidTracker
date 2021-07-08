@@ -1,8 +1,16 @@
 .table{
-    overflow: scroll;
+    overflow-y: scroll;
     height: 400px;;
     background-color: white;
     margin-top: 20px;
+}
+.table--dark {
+    overflow-y: scroll;
+    height: 400px;;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    
 }
 
 
@@ -10,11 +18,24 @@
     display: flex;
     justify-content: space-between;
     padding :0.5rem 1rem;
+    border-radius: 10px;
+}
+.table--dark tr{
+    display: flex;
+    justify-content: space-between;
+    padding :0.5rem 1rem;
+    color: grey;
+    border-radius: 10px;
 }
 
 .table td{
     padding: 0.5rem;
 }
+
+.table--dark td{
+    padding: 0.5rem;
+}
+
 .table tr:nth-of-type(odd){
     background-color: #f3f2f8;
 }

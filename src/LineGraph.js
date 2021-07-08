@@ -63,8 +63,10 @@ const buildChartData = (data, casesType) => {
   return chartData;
 };
 
-function LineGraph({ casesType,country}) {
+function LineGraph({ casesType,country,darkTheme}) {
  
+  console.log("dark in graph",darkTheme);
+
   const [data, setData] = useState({});
 
   useEffect(() => {
@@ -93,7 +95,7 @@ function LineGraph({ casesType,country}) {
   }, [casesType,country]);
 
   return (
-    <div>
+    <div style={{backgroundColor:`${darkTheme?"black":""}`}} >
       {data?.length > 0 && (
         <Line
           data={{
@@ -112,4 +114,4 @@ function LineGraph({ casesType,country}) {
   );
 }
 
-export default LineGraph;
+export default React.memo(LineGraph) ;

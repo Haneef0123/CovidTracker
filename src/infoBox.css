@@ -1,6 +1,7 @@
 .infoBox{
     flex: 1;
     cursor: pointer;
+    
 }
 .infoBox:not(:last-child){
     margin-right: 15px;
@@ -19,10 +20,22 @@
 .infoBox--red{
     border-color: red;
 }
+.infoBox--darkTheme{
+    background-color: black !important;
+    border: 10px solid #E6E6FA;
+    
+}
+.infoBox--darkCases{
+    color: orangered;
+}
 
-.infoBox_toal{
+.infoBox_title--dark{
+    color: grey;
+}
+
+/* .infoBox_total{
     color: #6c757d;
     font-weight: 700 !important;
     font-size: 0.8rem !important;
     margin-top: 15px !important;
-}
+} */

@@ -1,10 +1,10 @@
 import React from 'react'
 import numeral from 'numeral';
 import "./Table.css";
-function Table({countries}) {
+function Table({countries,darkTheme}) {
     console.log(countries);
     return (
-        <div  className="table">
+        <div  className={`${darkTheme?"table--dark":"table"}`}>
             {countries.map(country=>{
                 return   <tr key={country.country}>
                         <td>{country.country} </td>
@@ -16,4 +16,4 @@ function Table({countries}) {
     )
 }
 
-export default Table
+export default React.memo(Table); 
