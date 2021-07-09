@@ -17,3 +17,4 @@ function Table({countries,darkTheme}) {
 }
 
 export default React.memo(Table); 
+

@@ -1,14 +1,14 @@
-import React,{useState,useEffect, useCallback} from "react"
+import React,{useState,useEffect, useCallback,lazy,Suspense} from "react"
 import './App.css';
 import {MenuItem,FormControl,Select,Card,CardContent} from "@material-ui/core";
 import Infobox from "./InfoBox";
 // import Map from "./Map";
-import Table from "./Table"; 
+// import Table from "./Table"; 
 import { sortData } from "./util.js";
 import LineGraph from "./LineGraph";
-import "leaflet/dist/leaflet.css";
+
 import { prettyPrintStat } from "./util.js";
-// const Table = React.lazy(() => import('./Table.js'));
+const Table = lazy(() => import('./Table.js'));
 
 function App() {
   const [countries,setCountires] = useState([]);
@@ -124,7 +124,10 @@ const [casesType,setCasesType] = useState("cases")
               <LineGraph darkTheme={darkTheme} casesType={casesType} country={country} />
               <h3>{`${country==="worldwide"?"worldwide":countryInfo.country}`} {casesType}</h3> 
               <h2 style={{fontSize:"1.2rem"}} >Live cases by country</h2>
+              <Suspense fallback={<div>Loading..</div>} >
               <Table darkTheme={darkTheme} countries={tableData} />
+              </Suspense>
+              
             </CardContent>
         </Card>
       </div>
